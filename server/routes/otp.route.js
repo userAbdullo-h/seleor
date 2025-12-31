@@ -1,13 +1,10 @@
+const otpController = require('../controllers/otp.controller')
+
 const router = require('express').Router()
 
-router.post('/send-otp', (req, res) => {
-	res.send('Login route')
-})
-router.post('/verify-otp', (req, res) => {
-	res.send('Login route')
-})
-router.post('/resend-otp', (req, res) => {
-	res.send('Login route')
-})
+router.post('/send', otpController.sendOtp)
+
+router.post('/verify', otpController.verifyOtp)
+// router.post('/resend', (req, res) => {})
 
 module.exports = router
